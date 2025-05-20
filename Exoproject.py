@@ -4,7 +4,7 @@ import math
 
 model = osim.Model()
 model.setName('Exoarm')
-model.setGravity(osim.Vec3(0, -9.81, 0))  # Gravity along Y-axis
+model.setGravity(osim.Vec3(0, -9.81, 0))  
 
 
 upperarm = osim.Body('upperarm', 2.0, osim.Vec3(0),
@@ -235,7 +235,7 @@ finger_cable_controller.setName('finger_cable_controller')
 finger_cable_controller.addActuator(thumb_cable)
 finger_cable_controller.addActuator(finger_cable)
 
-# Constant pull (can change later)
+
 finger_cable_controller.prescribeControlForActuator("thumb_cable", osim.Constant(1.0))
 finger_cable_controller.prescribeControlForActuator("finger_cable", osim.Constant(1.0))
 
